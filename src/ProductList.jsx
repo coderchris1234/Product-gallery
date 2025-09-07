@@ -1,5 +1,5 @@
 import "./Product.css";
-function ProductList({product}) {
+function ProductList({ product }) {
   return (
     <div className="product-container">
       <div className="product-wrapper">
@@ -7,7 +7,7 @@ function ProductList({product}) {
         <span>{product.brand}</span>
         <p>{product.title}</p>
         <p>{product.model}</p>
-        <span>{product.price}</span>
+        <span>${product.price}</span>
         <button>Buy Now</button>
       </div>
     </div>

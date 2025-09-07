@@ -1,4 +1,4 @@
-import "./Product.css"
+import "./Product.css";
 import { useEffect, useState } from "react";
 import ProductList from "./ProductList";
 function Product() {
@@ -9,8 +9,8 @@ function Product() {
     const getProduct = async () => {
       const res = await fetch(url, { method: "GET" });
       const data = await res.json();
-        setProduct(data);
-      
+      setProduct(data);
+
       console.log("fetching products", data);
     };
     getProduct();
@@ -18,15 +18,13 @@ function Product() {
 
   return (
     <div>
-      <h1 className="header">E-Commerce Products</h1>
+      <h1 className="header">Pick Your Choices From The List</h1>
       <div className="product-wow">
-       {
-        product.map((products) => (
-          <div key={product.id}>
-               <ProductList product={products} />
+        {product.map((products) => (
+          <div key={products.id}>
+            <ProductList product={products} />
           </div>
-        ))
-       }
+        ))}
       </div>
     </div>
   );
